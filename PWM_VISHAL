@@ -1,4 +1,4 @@
-+import machine
+import machine
 import time
 
 motor_pin = machine.Pin(15)
