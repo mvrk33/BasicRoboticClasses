@@ -10,9 +10,12 @@ while True:
     print("ADC value --> ",reading)
     values.append(reading)
     utime.sleep(0.1)
-    if s==100:
+    if s==50:
         break
-print('the ADC value =',(sum(values)/s))    ### " ADC value " obtained by using (Average // Arthematic Mean ) operation..
+adc_value = (sum(values)/s)
+print('the ADC value =',adc_value)    ### " ADC value " obtained by using (Average // Arthematic Mean ) operation..
+formule = (3.3*adc_value/2**12)
+print('Voltage at the Point ==>',formule,'V')
 
 
 
