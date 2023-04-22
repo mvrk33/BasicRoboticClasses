@@ -1,0 +1,11 @@
++import machine
+import time
+
+motor_pin = machine.Pin(15)
+pwm = machine.PWM(motor_pin)
+pwm.freq(1000)
+
+while True:
+    for duty_cycle in range(0, 65536, 1000):
+        pwm.duty_u16(duty_cycle)
+        time.sleep(0.2)
