@@ -1,9 +1,21 @@
 import machine
 import utime
- 
+values=[]                   ### creating a list to obtain the number of values to find "ADC value" 
 analog_value = machine.ADC(28)
+s=0
 
 while True:
-    reading = analog_value.read_u16()     
+    reading = analog_value.read_u16()
+    s=s+1
     print("ADC value --> ",reading)
+    values.append(reading)
     utime.sleep(0.1)
+    if s==100:
+        break
+print('the ADC value =',(sum(values)/s))    ### " ADC value " obtained by using (Average // Arthematic Mean ) operation..
+
+
+
+
+
+
