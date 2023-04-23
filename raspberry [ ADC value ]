@@ -9,7 +9,7 @@ while True:
     s=s+1
     print("ADC value --> ",reading)
     values.append(reading)
-    utime.sleep(0.1)
+    utime.sleep(0.1)         
     if s==50:
         break
 adc_value = (sum(values)/s)
