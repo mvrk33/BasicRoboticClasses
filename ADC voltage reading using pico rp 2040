@@ -1,0 +1,21 @@
+To continuously measure the analog voltage using Raspberry Pi Pico and print the voltage value at regular intervals, you can use a loop with a time delay 
+--------------------------------------------------------------------------------------------------------
+from machine import Pin, ADC
+import time
+
+# Initialize ADC module
+adc = ADC(Pin(28))
+
+# Continuously read analog voltage and convert to voltage
+while True:
+    reading = adc.read_u16()
+    print(reading)
+    voltage = reading * 3.3 / 65535
+    print(voltage)
+
+    # Print the voltage value
+    print("Analog voltage: {:.2f}V".format(voltage))
+
+    # Delay for 1 second
+    time.sleep(2)
+    
