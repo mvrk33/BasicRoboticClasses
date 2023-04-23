@@ -1,6 +1,6 @@
 import machine
 import utime
-values=[]                   ### creating a list to obtain the number of values to find "ADC value" 
+values=[]                   ### creating a list to obtain the number of values to find "ADC value"..
 analog_value = machine.ADC(28)
 s=0
 
@@ -15,7 +15,8 @@ while True:
 adc_value = (sum(values)/s)
 print('the ADC value =',adc_value)    ### " ADC value " obtained by using (Average // Arthematic Mean ) operation..
 formule = (3.3*adc_value/2**12)
-print('Voltage at the Point ==>',formule,'V')
+print('Voltage at the Point ==>',formule,'V')  ### The voltage obtained here is when NO-LOAD is Connected..
+
 
 
 
