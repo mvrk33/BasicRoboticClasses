@@ -2,7 +2,7 @@
 <html>
 
 <head>
- Basics Robotic Classes...
+ Basics Robotic Class...
 </head>
 
 <body>
